@@ -2,7 +2,7 @@
 
     display: grid;
     background-color: #2196F3;
-    grid-template-columns: repeat(16,1fr);
+    /* grid-template-columns:  */
     padding: 50px;
     height: 960px;
     width: 960px;
@@ -20,4 +20,9 @@
   
 
 
+}
+ div.item:hover{
+
+
+    background-color: black;
 }
