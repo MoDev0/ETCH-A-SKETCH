@@ -1,0 +1,23 @@
+.container{
+
+    display: grid;
+    background-color: #2196F3;
+    grid-template-columns: repeat(16,1fr);
+    padding: 50px;
+    height: 960px;
+    width: 960px;
+
+
+}
+  
+
+.item{
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    min-width: 10px;
+    min-height: 20px;
+  
+
+
+}
