@@ -13,6 +13,8 @@ inputColor.addEventListener('input',function(){
 let sizeBtn=document.getElementById("sizeBtn");
 sizeBtn.addEventListener('click',function(){
     size=prompt("please enter grid size, maximum is 100 ");
+    if(size===null)
+        size=16;
     
 
 

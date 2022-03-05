@@ -1,12 +1,27 @@
+body{
+
+    background-color:grey;
+
+
+}
+.title{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align:center;
+    padding-top: 14px;
+    
+
+}
+
 .container{
 
     display: grid;
-    background-color: #2196F3;
+     background-color:whitesmoke;
     /* grid-template-columns:  */
     padding: 50px;
-    height: 960px;
-    width: 960px;
-
+    height: 800px;
+    width: 800px;
+  
 
 }
   
@@ -15,14 +30,14 @@
 
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    min-width: 10px;
-    min-height: 20px;
-  
-
 
 }
- div.item:hover{
+.settings{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 50px;
 
-
-    background-color: black;
 }
