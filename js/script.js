@@ -1,4 +1,5 @@
 const container=document.querySelector('.container');
+let size=16;
 
 const inputColor=document.getElementById("favcolor");
 let color="blue";
@@ -9,8 +10,19 @@ inputColor.addEventListener('input',function(){
     
     });
 
-function createGrid(){
-for (let i=0;i<(16*16);i++){
+let sizeBtn=document.getElementById("sizeBtn");
+sizeBtn.addEventListener('click',function(){
+    size=prompt("please enter grid size, maximum is 100 ");
+    
+
+
+    clearGrid();
+
+});
+
+function createGrid(size){
+    if(size>100)return;
+for (let i=0;i<(size*size);i++){
     const div=document.createElement('div');
     div.className="item";
     div.addEventListener('mouseover',function(){div.style.backgroundColor=color;})
@@ -20,28 +32,27 @@ for (let i=0;i<(16*16);i++){
 
 }
 
-container.style.gridTemplateColumns="repeat(16,1fr)";
+container.style.gridTemplateColumns=`repeat(${size},1fr)`;
 }
 
 
 let eraseBtn=document.getElementById("btn");
-eraseBtn.addEventListener('click',function(){
-
-   container.innerHTML='';
-   createGrid();
+eraseBtn.addEventListener('click',clearGrid);
 
 
- 
-});
+function clearGrid(){
+    container.innerHTML='';
+    createGrid(size); 
 
-
+}
 
 
 
 
 
 window.onload=()=>{
-    createGrid();
+    createGrid(size);
+
 
 
 }
