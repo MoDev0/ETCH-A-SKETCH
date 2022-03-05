@@ -28,12 +28,22 @@ container.style.gridTemplateColumns="repeat(16,1fr)";
 
 
 
+const inputColor=document.getElementById("favcolor");
+let color="blue";
+
 
 const items=document.querySelectorAll('div.item');
 items.forEach(item => {
-item.addEventListener('mouseover',function(){item.style.backgroundColor="black";
+item.addEventListener('mouseover',function(){item.style.backgroundColor=color;
 
 
 });
     
 });
+
+//color : stores user's entered color
+inputColor.addEventListener('input',function(){
+    color=inputColor.value;    
+    
+    });
+    
