@@ -13,7 +13,8 @@ inputColor.addEventListener('input',function(){
 let sizeBtn=document.getElementById("sizeBtn");
 sizeBtn.addEventListener('click',function(){
     size=prompt("please enter grid size, maximum is 100 ");
-    if(size===null)
+
+    if(size===null)// in case user canceled the 
         size=16;
     
 
@@ -27,7 +28,10 @@ function createGrid(size){
 for (let i=0;i<(size*size);i++){
     const div=document.createElement('div');
     div.className="item";
-    div.addEventListener('mouseover',function(){div.style.backgroundColor=color;})
+    // div.addEventListener('mouseover',function(){div.style.backgroundColor=color;})
+    div.addEventListener('mouseover',changeColor);
+    div.addEventListener('mousedown',changeColor);
+
 
 
     container.appendChild(div);
@@ -48,6 +52,19 @@ function clearGrid(){
 
 }
 
+
+let mouseDown=false;
+document.body.onmousedown=()=>{mouseDown=true};
+document.body.onmouseup=()=>{mouseDown=false};
+
+function changeColor(e){
+    if(e.type==='mouseover'&&!mouseDown) return;
+    
+    e.target.style.backgroundColor=color;
+
+
+
+}
 
 
 
