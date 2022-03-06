@@ -58,9 +58,8 @@ document.body.onmousedown=()=>{mouseDown=true};
 document.body.onmouseup=()=>{mouseDown=false};
 
 function changeColor(e){
-    if(e.type==='mouseover'&&!mouseDown) return;
-    
-    e.target.style.backgroundColor=color;
+    if(e.type==='mouseover'&&!mouseDown) return; //change color when mouseover&&mousedown or mousedown only
+        e.target.style.backgroundColor=color;
 
 
 
